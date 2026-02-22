@@ -109,3 +109,64 @@ const navObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => navObserver.observe(section));
+
+// ========== Hero Marquee (infinite scroll) ==========
+(function () {
+  const container = document.querySelector('.hero__marquee');
+  if (!container) return;
+
+  const track = container.querySelector('.marquee__track');
+  const halfWidth = track.scrollWidth / 2;
+
+  let speed = 0.5;
+  let isProgrammatic = false;
+  let isUserScrolling = false;
+  let userScrollTimeout;
+
+  function wrapScroll() {
+    if (container.scrollLeft >= halfWidth) {
+      isProgrammatic = true;
+      container.scrollLeft -= halfWidth;
+    } else if (container.scrollLeft <= 0) {
+      isProgrammatic = true;
+      container.scrollLeft += halfWidth;
+    }
+  }
+
+  function autoScroll() {
+    if (!isUserScrolling) {
+      isProgrammatic = true;
+      container.scrollLeft += speed;
+      wrapScroll();
+    }
+    requestAnimationFrame(autoScroll);
+  }
+
+  container.addEventListener('scroll', function () {
+    if (isProgrammatic) {
+      isProgrammatic = false;
+      return;
+    }
+    isUserScrolling = true;
+    clearTimeout(userScrollTimeout);
+    userScrollTimeout = setTimeout(function () {
+      wrapScroll();
+      isUserScrolling = false;
+    }, 1500);
+  }, { passive: true });
+
+  container.addEventListener('wheel', function (e) {
+    if (Math.abs(e.deltaX) > 0 || Math.abs(e.deltaY) > 0) {
+      e.preventDefault();
+      isUserScrolling = true;
+      clearTimeout(userScrollTimeout);
+      container.scrollLeft += e.deltaY + e.deltaX;
+      userScrollTimeout = setTimeout(function () {
+        wrapScroll();
+        isUserScrolling = false;
+      }, 1500);
+    }
+  }, { passive: false });
+
+  requestAnimationFrame(autoScroll);
+})();
