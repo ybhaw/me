@@ -17,21 +17,57 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 const tabs = document.querySelectorAll('.exp__tab');
 const panels = document.querySelectorAll('.exp__panel');
 
-tabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    const idx = tab.dataset.tab;
+function activateTab(tab) {
+  const idx = tab.dataset.tab;
 
-    tabs.forEach((t) => {
-      t.classList.remove('active');
-      t.setAttribute('aria-selected', 'false');
-    });
-    panels.forEach((p) => p.classList.remove('active'));
-
-    tab.classList.add('active');
-    tab.setAttribute('aria-selected', 'true');
-    document.querySelector(`.exp__panel[data-panel="${idx}"]`).classList.add('active');
+  tabs.forEach((t) => {
+    t.classList.remove('active');
+    t.setAttribute('aria-selected', 'false');
+    t.setAttribute('tabindex', '-1');
   });
+  panels.forEach((p) => p.classList.remove('active'));
+
+  tab.classList.add('active');
+  tab.setAttribute('aria-selected', 'true');
+  tab.setAttribute('tabindex', '0');
+  tab.focus();
+  document.querySelector(`.exp__panel[data-panel="${idx}"]`).classList.add('active');
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => activateTab(tab));
 });
+
+// Keyboard navigation for tabs (Arrow keys, Home, End)
+const tabList = document.querySelector('.exp__tabs');
+if (tabList) {
+  tabList.addEventListener('keydown', (e) => {
+    const tabsArr = Array.from(tabs);
+    const currentIdx = tabsArr.indexOf(document.activeElement);
+    if (currentIdx === -1) return;
+
+    let newIdx;
+    const isVertical = window.innerWidth > 768;
+
+    if ((isVertical && e.key === 'ArrowDown') || (!isVertical && e.key === 'ArrowRight')) {
+      e.preventDefault();
+      newIdx = (currentIdx + 1) % tabsArr.length;
+    } else if ((isVertical && e.key === 'ArrowUp') || (!isVertical && e.key === 'ArrowLeft')) {
+      e.preventDefault();
+      newIdx = (currentIdx - 1 + tabsArr.length) % tabsArr.length;
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      newIdx = 0;
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      newIdx = tabsArr.length - 1;
+    }
+
+    if (newIdx !== undefined) {
+      activateTab(tabsArr[newIdx]);
+    }
+  });
+}
 
 // ========== Mobile Menu ==========
 const hamburger = document.getElementById('hamburger');

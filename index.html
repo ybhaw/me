@@ -5,15 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaibhaw | Bootstrapper & Full-Stack Engineer</title>
   <meta name="description" content="Vaibhaw — Bootstrapper, full-stack engineer, and AI-powered builder. From Fortune 500s to scrappy startups, I build things that ship using AI, automation, and smart integrations.">
+  <meta name="author" content="Vaibhaw">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://me.ybhaw.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vaibhaw | Bootstrapper & Full-Stack Engineer">
+  <meta property="og:description" content="Full-stack engineer, serial builder, and AI-first developer. I build data pipelines, intelligent automations, and AI-augmented apps.">
+  <meta property="og:url" content="https://me.ybhaw.com/">
+  <meta property="og:site_name" content="Vaibhaw">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Vaibhaw | Bootstrapper & Full-Stack Engineer">
+  <meta name="twitter:description" content="Full-stack engineer, serial builder, and AI-first developer. I build data pipelines, intelligent automations, and AI-augmented apps.">
+
+  <!-- Favicons & Web App -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#0a0a0a">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vaibhaw",
+    "url": "https://me.ybhaw.com",
+    "jobTitle": "Full-Stack Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "IIT Bombay"
+    },
+    "sameAs": [
+      "https://github.com/ybhaw",
+      "https://www.linkedin.com/in/vaibhaww/"
+    ],
+    "knowsAbout": ["Python", "Rust", "TypeScript", "AI", "LLMs", "Docker", "Kubernetes", "Apache Kafka", "AWS"]
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Skip to main content (a11y) -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
   <!-- Nav -->
-  <header class="nav" id="nav">
+  <header class="nav" id="nav" role="banner">
     <nav class="nav__inner">
       <a href="#" class="nav__logo" aria-label="Home">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +83,8 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero" id="hero">
+  <main>
+  <section class="hero" id="hero" aria-label="Introduction">
     <div class="hero__inner">
       <p class="hero__greeting fade-seq">Hi, my name is</p>
       <h1 class="hero__name fade-seq">Vaibhaw.</h1>
@@ -44,7 +94,7 @@
         <strong>AI tools, automation, and service integrations</strong> to ship faster and smarter. From
         <strong>Fortune 500s</strong> to <strong>healthcare startups</strong> to <strong>indie side projects</strong>
         — I build data pipelines processing millions of records, intelligent automations, and AI-augmented apps.
-        IIT Bombay alum. Open source enthusiast.
+        <strong>IIT Bombay</strong> alum. Open source enthusiast.
       </p>
       <div class="hero__cta fade-seq">
         <a href="https://github.com/ybhaw" target="_blank" rel="noopener" class="hero__social" aria-label="GitHub">
@@ -61,9 +111,9 @@
   </section>
 
   <!-- About -->
-  <section class="section" id="about">
+  <section class="section" id="about" aria-labelledby="about-heading">
     <div class="section__inner">
-      <h2 class="section__heading reveal"><span class="section__num">01.</span> About Me</h2>
+      <h2 class="section__heading reveal" id="about-heading"><span class="section__num">01.</span> About Me</h2>
       <div class="about__grid">
         <div class="about__text reveal">
           <p>
@@ -112,20 +162,20 @@
   </section>
 
   <!-- Experience -->
-  <section class="section" id="experience">
+  <section class="section" id="experience" aria-labelledby="experience-heading">
     <div class="section__inner">
-      <h2 class="section__heading reveal"><span class="section__num">02.</span> Who I've Worked With</h2>
+      <h2 class="section__heading reveal" id="experience-heading"><span class="section__num">02.</span> Who I've Worked With</h2>
       <div class="exp reveal">
         <div class="exp__tabs" role="tablist" aria-label="Work experience">
-          <button class="exp__tab active" role="tab" aria-selected="true" data-tab="0">Healthcare Startup</button>
-          <button class="exp__tab" role="tab" aria-selected="false" data-tab="1">Fortune 500 (IoT)</button>
-          <button class="exp__tab" role="tab" aria-selected="false" data-tab="2">The Software Practice</button>
-          <button class="exp__tab" role="tab" aria-selected="false" data-tab="3">Freelance</button>
-          <button class="exp__tab" role="tab" aria-selected="false" data-tab="4">Techfest IIT Bombay</button>
+          <button class="exp__tab active" role="tab" aria-selected="true" aria-controls="panel-0" id="tab-0" data-tab="0" tabindex="0">Healthcare Startup</button>
+          <button class="exp__tab" role="tab" aria-selected="false" aria-controls="panel-1" id="tab-1" data-tab="1" tabindex="-1">Fortune 500 (IoT)</button>
+          <button class="exp__tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" data-tab="2" tabindex="-1">The Software Practice</button>
+          <button class="exp__tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" data-tab="3" tabindex="-1">Freelance</button>
+          <button class="exp__tab" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" data-tab="4" tabindex="-1">Techfest IIT Bombay</button>
         </div>
         <div class="exp__panels">
 
-          <div class="exp__panel active" data-panel="0" role="tabpanel">
+          <div class="exp__panel active" data-panel="0" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
             <h3 class="exp__title">Sr. Software Engineer <span class="exp__at">@ Healthcare Startup</span></h3>
             <p class="exp__dates">Aug 2023 — Present</p>
             <ul class="exp__list">
@@ -137,7 +187,7 @@
             </ul>
           </div>
 
-          <div class="exp__panel" data-panel="1" role="tabpanel">
+          <div class="exp__panel" data-panel="1" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
             <h3 class="exp__title">Software Engineer <span class="exp__at">@ Fortune 500 (IoT)</span></h3>
             <p class="exp__dates">Jan 2022 — Jul 2023</p>
             <ul class="exp__list">
@@ -148,7 +198,7 @@
             </ul>
           </div>
 
-          <div class="exp__panel" data-panel="2" role="tabpanel">
+          <div class="exp__panel" data-panel="2" role="tabpanel" id="panel-2" aria-labelledby="tab-2">
             <h3 class="exp__title">Software Developer <span class="exp__at">@ The Software Practice</span></h3>
             <p class="exp__dates">Jun 2021 — Dec 2021</p>
             <ul class="exp__list">
@@ -158,7 +208,7 @@
             </ul>
           </div>
 
-          <div class="exp__panel" data-panel="3" role="tabpanel">
+          <div class="exp__panel" data-panel="3" role="tabpanel" id="panel-3" aria-labelledby="tab-3">
             <h3 class="exp__title">Freelance Developer <span class="exp__at">@ Independent</span></h3>
             <p class="exp__dates">2020 — 2021</p>
             <ul class="exp__list">
@@ -169,7 +219,7 @@
             </ul>
           </div>
 
-          <div class="exp__panel" data-panel="4" role="tabpanel">
+          <div class="exp__panel" data-panel="4" role="tabpanel" id="panel-4" aria-labelledby="tab-4">
             <h3 class="exp__title">Tech Team Lead <span class="exp__at">@ Techfest, IIT Bombay</span></h3>
             <p class="exp__dates">2019 — 2020</p>
             <ul class="exp__list">
@@ -186,9 +236,9 @@
   </section>
 
   <!-- Projects -->
-  <section class="section" id="projects">
+  <section class="section" id="projects" aria-labelledby="projects-heading">
     <div class="section__inner">
-      <h2 class="section__heading reveal"><span class="section__num">03.</span> Things I've Built</h2>
+      <h2 class="section__heading reveal" id="projects-heading"><span class="section__num">03.</span> Things I've Built</h2>
 
       <!-- Featured Projects -->
       <div class="projects__featured">
@@ -348,10 +398,10 @@
   </section>
 
   <!-- Contact -->
-  <section class="section section--contact" id="contact">
+  <section class="section section--contact" id="contact" aria-labelledby="contact-heading">
     <div class="section__inner section__inner--narrow">
       <p class="contact__overline reveal"><span class="section__num">04.</span> What's Next?</p>
-      <h2 class="contact__heading reveal">Get In Touch</h2>
+      <h2 class="contact__heading reveal" id="contact-heading">Get In Touch</h2>
       <p class="contact__text reveal">
         Whether you're a startup looking for a technical co-builder, an enterprise team that needs a
         full-stack generalist, or you just want to jam on an idea — I'm always up for a conversation.
@@ -360,8 +410,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer__socials">
       <a href="https://github.com/ybhaw" target="_blank" rel="noopener" aria-label="GitHub">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
