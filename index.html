@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhaw | Bootstrapper & Full-Stack Engineer</title>
+  <meta name="description" content="Vaibhaw — Bootstrapper, full-stack engineer, and tech enthusiast. From Fortune 500s to scrappy startups, I build things that ship.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <nav class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="16,2 30,28 2,28" stroke="var(--accent)" stroke-width="2" fill="none"/>
+          <text x="16" y="23" text-anchor="middle" fill="var(--accent)" font-size="12" font-family="JetBrains Mono, monospace" font-weight="700">V</text>
+        </svg>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#about" class="nav__link"><span class="nav__num">01.</span> About</a>
+        <a href="#experience" class="nav__link"><span class="nav__num">02.</span> Experience</a>
+        <a href="#projects" class="nav__link"><span class="nav__num">03.</span> Projects</a>
+        <a href="#contact" class="nav__link"><span class="nav__num">04.</span> Contact</a>
+        <a href="/resume.pdf" class="btn btn--outline btn--sm" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <p class="hero__greeting fade-seq">Hi, my name is</p>
+      <h1 class="hero__name fade-seq">Vaibhaw.</h1>
+      <h2 class="hero__tagline fade-seq">I bootstrap ideas into products.</h2>
+      <p class="hero__desc fade-seq">
+        Full-stack engineer and serial builder. I've shipped for
+        <strong>Fortune 500s</strong>, <strong>healthcare startups</strong>, <strong>IoT platforms</strong>,
+        and <strong>indie side projects</strong> — from data pipelines processing millions of records
+        to browser extensions and 3D web apps. IIT Bombay alum. Open source enthusiast.
+      </p>
+      <div class="hero__cta fade-seq">
+        <a href="https://github.com/ybhaw" target="_blank" rel="noopener" class="hero__social" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/ybhaw" target="_blank" rel="noopener" class="hero__social" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:vaibhaw@ybhaw.com" class="hero__social" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section__inner">
+      <h2 class="section__heading reveal"><span class="section__num">01.</span> About Me</h2>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            I'm a bootstrapper at heart — give me a problem and I'll ship a solution end-to-end. My journey started at <strong>IIT Bombay</strong>, where I led tech teams, broke a <strong>Guinness World Record</strong>, and caught the building bug that never went away.
+          </p>
+          <p>
+            Since then, I've worked with a <strong>diverse range of clients and industries</strong> — architecting data pipelines at a healthcare startup, building IoT dashboards for a Fortune 500, shipping enterprise web apps at consultancies, freelancing for small businesses, and bootstrapping my own open source tools in Rust, Python, and TypeScript. I'm equally comfortable in a boardroom with stakeholders and in a terminal at 2 AM.
+          </p>
+          <p>Here are a few technologies I've been working with recently:</p>
+          <ul class="about__tech">
+            <li>Python / PySpark</li>
+            <li>Rust</li>
+            <li>TypeScript</li>
+            <li>Docker / K8s</li>
+            <li>Apache Hudi / Kafka</li>
+            <li>AWS (EMR, Glue, S3)</li>
+          </ul>
+        </div>
+        <div class="about__cards reveal">
+          <div class="about__card">
+            <span class="about__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 6 3 12 0v-5"/></svg>
+            </span>
+            <h3>IIT Bombay</h3>
+            <p>B.Tech — one of India's premier engineering institutes</p>
+          </div>
+          <div class="about__card">
+            <span class="about__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </span>
+            <h3>Guinness Record</h3>
+            <p>Part of a world-record team at IIT Bombay Techfest</p>
+          </div>
+          <div class="about__card">
+            <span class="about__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </span>
+            <h3>Diverse Clients</h3>
+            <p>Fortune 500s, startups, small businesses, and open source communities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="section__inner">
+      <h2 class="section__heading reveal"><span class="section__num">02.</span> Who I've Worked With</h2>
+      <div class="exp reveal">
+        <div class="exp__tabs" role="tablist" aria-label="Work experience">
+          <button class="exp__tab active" role="tab" aria-selected="true" data-tab="0">Healthcare Startup</button>
+          <button class="exp__tab" role="tab" aria-selected="false" data-tab="1">Fortune 500 (IoT)</button>
+          <button class="exp__tab" role="tab" aria-selected="false" data-tab="2">The Software Practice</button>
+          <button class="exp__tab" role="tab" aria-selected="false" data-tab="3">Freelance</button>
+          <button class="exp__tab" role="tab" aria-selected="false" data-tab="4">Techfest IIT Bombay</button>
+        </div>
+        <div class="exp__panels">
+
+          <div class="exp__panel active" data-panel="0" role="tabpanel">
+            <h3 class="exp__title">Sr. Software Engineer <span class="exp__at">@ Healthcare Startup</span></h3>
+            <p class="exp__dates">Aug 2023 — Present</p>
+            <ul class="exp__list">
+              <li>Architected and optimized large-scale data pipelines processing 50M+ records daily using PySpark, Apache Hudi, and AWS EMR</li>
+              <li>Built a Rust-based Python file scanner (pyscan) that reduced CI analysis time by 80%</li>
+              <li>Designed event-driven ETL workflows with Kafka, Glue, and Step Functions, cutting data latency from hours to minutes</li>
+              <li>Led migration of legacy monolith to microservices architecture, improving deployment velocity by 3x</li>
+              <li>Mentored junior engineers and established team coding standards and review processes</li>
+            </ul>
+          </div>
+
+          <div class="exp__panel" data-panel="1" role="tabpanel">
+            <h3 class="exp__title">Software Engineer <span class="exp__at">@ Fortune 500 (IoT)</span></h3>
+            <p class="exp__dates">Jan 2022 — Jul 2023</p>
+            <ul class="exp__list">
+              <li>Developed real-time IoT dashboards for industrial automation systems using React and Node.js</li>
+              <li>Built REST APIs and data aggregation services handling sensor data from 10K+ devices</li>
+              <li>Implemented CI/CD pipelines with Jenkins and Docker, reducing release cycle from weeks to days</li>
+              <li>Collaborated with cross-functional teams to deliver firmware update management platform</li>
+            </ul>
+          </div>
+
+          <div class="exp__panel" data-panel="2" role="tabpanel">
+            <h3 class="exp__title">Software Developer <span class="exp__at">@ The Software Practice</span></h3>
+            <p class="exp__dates">Jun 2021 — Dec 2021</p>
+            <ul class="exp__list">
+              <li>Built full-stack web applications for enterprise clients using TypeScript, React, and PostgreSQL</li>
+              <li>Designed and implemented RESTful APIs with Express.js serving 100K+ daily active users</li>
+              <li>Optimized database queries and implemented caching strategies, reducing response times by 60%</li>
+            </ul>
+          </div>
+
+          <div class="exp__panel" data-panel="3" role="tabpanel">
+            <h3 class="exp__title">Freelance Developer <span class="exp__at">@ Independent</span></h3>
+            <p class="exp__dates">2020 — 2021</p>
+            <ul class="exp__list">
+              <li>Wore every hat — sales, design, dev, deploy, support — for 10+ clients across e-commerce, education, and media</li>
+              <li>Built a custom CMS for a content publisher that scaled to 3M+ monthly page views</li>
+              <li>Delivered mobile-first web apps for small businesses with zero-downtime launches</li>
+              <li>Managed client relationships end-to-end, from scoping to post-launch iteration</li>
+            </ul>
+          </div>
+
+          <div class="exp__panel" data-panel="4" role="tabpanel">
+            <h3 class="exp__title">Tech Team Lead <span class="exp__at">@ Techfest, IIT Bombay</span></h3>
+            <p class="exp__dates">2019 — 2020</p>
+            <ul class="exp__list">
+              <li>Led a team of 15+ developers to build and maintain Asia's largest science & tech festival website</li>
+              <li>Architected the event registration platform handling 50K+ participants</li>
+              <li>Coordinated tech infrastructure for the Guinness World Record attempt event</li>
+              <li>Managed live streaming setup for virtual events reaching 100K+ viewers</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="section__inner">
+      <h2 class="section__heading reveal"><span class="section__num">03.</span> Things I've Built</h2>
+
+      <!-- Featured Projects -->
+      <div class="projects__featured">
+
+        <div class="project-card project-card--featured reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/pyscan-yb" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">pyscan-yb</h3>
+            <p class="project-card__desc">A blazing-fast Python file scanner built in Rust with PyO3 bindings. Analyzes imports, dependencies, and code structure across large codebases in seconds.</p>
+            <ul class="project-card__tech">
+              <li>Rust</li><li>Python</li><li>PyO3</li><li>CLI</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card project-card--featured reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/screenshot-beautifier" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Screenshot Beautifier</h3>
+            <p class="project-card__desc">A web tool to add beautiful backgrounds, shadows, and frames to screenshots. Supports drag-and-drop, real-time preview, and one-click export.</p>
+            <ul class="project-card__tech">
+              <li>TypeScript</li><li>Vite</li><li>Canvas API</li><li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card project-card--featured reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/url-blocker-extension" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">URL Blocker Extension</h3>
+            <p class="project-card__desc">A privacy-first browser extension that blocks URLs matching custom regex patterns. Lightweight, no data collection, fully configurable.</p>
+            <ul class="project-card__tech">
+              <li>JavaScript</li><li>Chrome APIs</li><li>Regex</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card project-card--featured reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/spin-the-wheel-3d" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Spin the Wheel 3D</h3>
+            <p class="project-card__desc">An interactive 3D wheel spinner built with Three.js. Features realistic physics, customizable segments, and smooth WebGL animations.</p>
+            <ul class="project-card__tech">
+              <li>JavaScript</li><li>Three.js</li><li>WebGL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card project-card--featured reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/mock-oauth2-server" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Mock OAuth2 Server</h3>
+            <p class="project-card__desc">A lightweight mock OAuth2/OIDC server for local development and testing. Supports authorization code flow, token refresh, and custom claims.</p>
+            <ul class="project-card__tech">
+              <li>Python</li><li>Flask</li><li>OAuth2</li><li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Other Projects -->
+      <h3 class="projects__other-heading reveal">Other Noteworthy Projects</h3>
+      <div class="projects__other">
+
+        <div class="project-card project-card--small reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/piano-warrior" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Piano Warrior</h3>
+            <p class="project-card__desc">A rhythm-based MIDI game where notes fall Guitar Hero-style. Connect a MIDI keyboard and play along to your favorite songs.</p>
+            <ul class="project-card__tech">
+              <li>JavaScript</li><li>Web MIDI</li><li>Canvas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card project-card--small reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/ai-understandings" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">AI Understandings</h3>
+            <p class="project-card__desc">Zero-dependency machine learning implementations from scratch. Neural networks, decision trees, and clustering algorithms in pure Python.</p>
+            <ul class="project-card__tech">
+              <li>Python</li><li>NumPy</li><li>ML</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card project-card--small reveal">
+          <div class="project-card__inner">
+            <div class="project-card__top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <div class="project-card__links">
+                <a href="https://github.com/ybhaw/convert-to-jpeg" target="_blank" rel="noopener" aria-label="GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Convert to JPEG</h3>
+            <p class="project-card__desc">A mobile app to batch-convert HEIC and other image formats to JPEG. Built with React Native and Expo for iOS.</p>
+            <ul class="project-card__tech">
+              <li>React Native</li><li>Expo</li><li>iOS</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--contact" id="contact">
+    <div class="section__inner section__inner--narrow">
+      <p class="contact__overline reveal"><span class="section__num">04.</span> What's Next?</p>
+      <h2 class="contact__heading reveal">Get In Touch</h2>
+      <p class="contact__text reveal">
+        Whether you're a startup looking for a technical co-builder, an enterprise team that needs a
+        full-stack generalist, or you just want to jam on an idea — I'm always up for a conversation.
+      </p>
+      <a href="mailto:vaibhaw@ybhaw.com" class="btn btn--accent reveal">Say Hello</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="https://github.com/ybhaw" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/ybhaw" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="mailto:vaibhaw@ybhaw.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+    <p class="footer__credit">Built by Vaibhaw</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
